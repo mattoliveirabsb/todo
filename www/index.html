@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+
+        
+
+        <ion-tabs class="tabs-calm tabs-icon-only">
+
+          <ion-tab title="home" ui-sref="home" icon-on="ion-ios7-paper" icon-off="ion-ios7-paper-outline">
+            <ion-nav-view name="home"></ion-nav-view>
+          </ion-tab>
+
+          <ion-tab title="completas" ui-sref="completas" icon-on="ion-ios7-checkmark" icon-off="ion-ios7-checkmark-outline">
+            <ion-nav-view name="completas"></ion-nav-view>
+          </ion-tab>
+
+        </ion-tabs>
+
+        <script id="home.html" type="text/ng-template">
+                <ion-nav-bar class="bar-calm"></ion-nav-bar>
+
+                <ion-view title="Tarefas">
+                        <ion-content padding="false">
+                                <ion-list>
+                                        <div class="item item-input">
+                                            <label class="item-input-wrapper">
+                                              <input type="text" placeholder="Nome da tarefa">
+                                            </label>
+                                            <button class="button button-clear button-positive button-icon ion-ios7-plus-outline button-adicionar">
+                                              
+                                            </button>
+                                          </div>
+                                </ion-list>
+                                <ion-list>
+                                        <ion-item ng-repeat="i in tarefas">
+                                                {{i.name}}
+
+                                                <ion-option-button class="button button-clear button-positive button-opcoes">
+                                                    Concluido
+                                                </ion-option-button>
+
+                                        </ion-item>
+
+                                </ion-list>
+                        </ion-content>
+                </ion-view>
+        </script>
+
+        <script id="completas.html" type="text/ng-template">
+                <ion-nav-bar class="bar-calm"></ion-nav-bar>
+                <ion-view title="Completas">
+                        <ion-content padding="false">
+                                <ion-list>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                        <ion-item class="completas">
+                                                Oi eu sou o Goku!
+                                        </ion-item>
+                                </ion-list>
+                        </ion-content>
+                </ion-view>
+        </script>
+
+
+       
+
+  </body>
+</html>

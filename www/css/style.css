@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+
+.completas {
+	text-decoration: line-through;
+}
+
+.button-adicionar {
+	font-size:36px !important;
+	position: relative;
+	right:5px;
+}
+
+.button-opcoes {
+	line-height: 50px !important;
+}
+
+.item {
+	border-top: 1px solid #f1f1f1 !important;
+	border-bottom: 1px solid #f1f1f1;
+}
